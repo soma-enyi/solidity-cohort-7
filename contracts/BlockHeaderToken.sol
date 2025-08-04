@@ -32,7 +32,10 @@ contract BlockToken is ERC20{
     function burnFrom(address _user, uint256 _amount)onlyOwner notAmount0(_amount) external {
         _burn(_user, _amount);
     }
-
+    function transferOwnership(address _newOwner) onlyOwner external {
+        require(_newOwner != address(0), "BlockToken:: Zero address not supported");
+        owner = _newOwner;
+    }
 
 }
 

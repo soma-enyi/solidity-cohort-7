@@ -6,6 +6,8 @@ let blockToken;
 let owner;
 let addr1;
 let addr2;
+let addr3;
+let addr4;
 
 beforeEach(async () => {
     BlockToken = await ethers.getContractFactory('BlockToken');
