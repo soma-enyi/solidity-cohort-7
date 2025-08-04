@@ -174,8 +174,8 @@ describe("BlockMarketPlace Test Suite", () => {
       expect(listing.sold).to.be.true;
 
       // Check payment distribution (97% to seller, 3% to marketplace)
-      const expectedSellerAmount = (price * 97/100);
-      const expectedMarketplaceAmount = (price * 3/ 100);
+      const expectedSellerAmount = (price * 97)/100;
+      const expectedMarketplaceAmount = (price * 3)/100;
 
       const addr2BalanceAfter = await ethers.provider.getBalance(addr2.address);
       const marketOwnerBalanceAfter = await ethers.provider.getBalance(
